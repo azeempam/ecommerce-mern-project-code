@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+  --bg-color: #0b0f19;
+  --text-main: #f3f4f6;
+  --accent-color: #8b5cf6;
+  --accent-glow: rgba(139, 92, 246, 0.5);
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  min-height: 80vh;
+  padding-bottom: 2rem;
+}
+
+/* Glassmorphism Card Style for Products */
+.card {
+  background: var(--card-bg) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+  overflow: hidden;
+  color: var(--text-main) !important;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px var(--accent-glow) !important;
+  border-color: var(--accent-color) !important;
+}
+
+.card-title, .card-text, .card-body a {
+  color: var(--text-main) !important;
+  text-decoration: none;
+}
+
+/* Hero Banner */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 50px rgba(139, 92, 246, 0.3);
+  animation: float 6s ease-in-out infinite;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(139,92,246,0.1) 100%);
+  pointer-events: none;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(11, 15, 25, 0.8) !important;
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--card-border);
+}
+
+.navbar-brand, .nav-link {
+  color: var(--text-main) !important;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent-color) !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4) !important;
+  transition: all 0.3s ease !important;
+  font-weight: 600 !important;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.6) !important;
+}
+
+/* List Group and Forms for Details Page */
+.list-group-item {
+  background: var(--card-bg) !important;
+  color: var(--text-main) !important;
+  border-color: var(--card-border) !important;
+  backdrop-filter: blur(10px);
+}
+
+.list-group {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.btn-light {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--card-border) !important;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.btn-light:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+}
+
+select.form-control, input.form-control {
+  background-color: rgba(0,0,0,0.3) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--card-border) !important;
+}
+
+select.form-control option {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
